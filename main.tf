@@ -10,19 +10,19 @@ resource "aws_instance" "controle" {
   }
 
   connection {
-    type = "ssh"
-    host = self.public_ip
-    user = "ubuntu"
+    type        = "ssh"
+    host        = self.public_ip
+    user        = "ubuntu"
     private_key = file("keys/controle")
   }
 
   provisioner "file" {
     destination = "/tmp/ansible.sh"
-    source = "ansible.sh"
+    source      = "ansible.sh"
   }
 
   provisioner "remote-exec" {
-    inline = [ "chmod +x /tmp/ansible.sh", "/tmp/ansible.sh" ]
+    inline = ["chmod +x /tmp/ansible.sh", "/tmp/ansible.sh"]
   }
 
 }
