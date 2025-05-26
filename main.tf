@@ -6,7 +6,7 @@ resource "aws_instance" "controle" {
   key_name          = aws_key_pair.controle_key_pair.key_name
 
   tags = {
-    name = "controle"
+    Name = "controle"
   }
 
   connection {
@@ -35,7 +35,7 @@ resource "aws_instance" "web_01" {
   key_name          = aws_key_pair.client_key_pair.key_name
 
   tags = {
-    name = "client"
+    Name = "web-01"
   }
 }
 
@@ -47,7 +47,7 @@ resource "aws_instance" "web_02" {
   key_name          = aws_key_pair.client_key_pair.key_name
 
   tags = {
-    name = "client"
+    Name = "web-02"
   }
 }
 
@@ -59,6 +59,6 @@ resource "aws_instance" "web_03" {
   key_name          = aws_key_pair.client_key_pair.key_name
 
   tags = {
-    name = "client"
+    Name = "db-01"
   }
 }
