@@ -10,7 +10,7 @@ variable "AMI_ID" {
   type = map(any)
   default = {
     ubuntu = "ami-084568db4383264d4"
-    centos = "ami-08603a6c0e104f115"
+    centos = "ami-066b4eecd8ba4c4f4"
   }
 }
 
